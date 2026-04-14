@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuming's Creative Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 基礎設定與馬卡龍色系變數 */
+        :root {
+            --bg-color: #FFFDF9; /* 暖白奶油底色 */
+            --text-main: #5D4037; /* 深咖啡色字體，比純黑更柔和 */
+            --pink: #FFD1DC;
+            --mint: #C1E1C1;
+            --blue: #B3E5FC;
+            --purple: #E1BEE7;
+            --yellow: #FFF9C4;
+        }
+
+        body {
+            font-family: 'Quicksand', 'Nunito', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* 頂部導航列 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: #FF9AA2;
+            text-shadow: 2px 2px 0px var(--blue);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 700;
+            margin-left: 20px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        
+        nav a:hover { background-color: var(--yellow); }
+
+        /* 主要內容區塊設定 */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            border: 3px solid transparent;
+        }
+
+        /* Hero 區塊 (左上) */
+        .hero {
+            background-color: var(--yellow);
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--pink);
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        h1 { font-size: 36px; margin: 10px 0; color: #8D6E63; }
+        h2 { font-size: 20px; color: #A1887F; margin-bottom: 20px;}
+
+        .btn {
+            display: inline-block;
+            background-color: var(--pink);
+            color: var(--text-main);
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(255, 209, 220, 0.8);
+        }
+
+        /* Projects 區塊 (右上) */
+        .projects-wrapper { background-color: var(--bg-color); border-color: var(--mint); }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 2px solid var(--blue);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .project-img {
+            width: 80px;
+            height: 80px;
+            background-color: var(--mint);
+            border-radius: 10px;
+        }
+
+        /* 技能與聯絡區塊 */
+        .skills-contact {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .tag-pink { background-color: var(--pink); }
+        .tag-mint { background-color: var(--mint); }
+        .tag-blue { background-color: var(--blue); }
+        .tag-purple { background-color: var(--purple); }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">FUMING'S SPACE</div>
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">PROJECTS</a>
+            <a href="#">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="box hero">
+            <img src="https://via.placeholder.com/150/FFD1DC/FFFFFF?text=Face" alt="Fuming" class="profile-pic">
+            <h1>HELLO, I'M FUMING!</h1>
+            <h2>Creative UI/UX Designer <br> & Digital Storyteller</h2>
+            <a href="#" class="btn">SEE MY WORK</a>
+        </div>
+
+        <div class="box projects-wrapper">
+            <h3 style="text-align: center; color: #8D6E63;">FEATURED PROJECTS</h3>
+            
+            <div class="project-card">
+                <div class="project-img"></div>
+                <div>
+                    <h4>UI Design Challenge</h4>
+                    <p style="font-size: 14px; margin: 5px 0;">Create a UI design challenge.</p>
+                    <span class="tag tag-pink">pastel</span> <span class="tag tag-mint">friendly</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img" style="background-color: var(--blue);"></div>
+                <div>
+                    <h4>Digital Art Collection</h4>
+                    <p style="font-size: 14px; margin: 5px 0;">Creative art creations.</p>
+                    <span class="tag tag-blue">creative</span>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img" style="background-color: var(--purple);"></div>
+                <div>
+                    <h4>Branding for Cafe</h4>
+                    <p style="font-size: 14px; margin: 5px 0;">Branding and marketing.</p>
+                    <span class="tag tag-mint">friendly</span> <span class="tag tag-blue">creative</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-contact">
+            <div class="box" style="background-color: var(--bg-color); border-color: var(--pink);">
+                <h3 style="text-align: center; color: #8D6E63;">KEY SKILLS</h3>
+                <div style="text-align: center; margin-top: 20px;">
+                    <span class="tag tag-pink">Visual Design</span>
+                    <span class="tag tag-mint">Prototyping</span>
+                    <span class="tag tag-blue">Creative Writing</span>
+                    <span class="tag tag-purple">User Research</span>
+                    <span class="tag tag-yellow" style="background-color: var(--yellow);">Illustrating</span>
+                </div>
+            </div>
+
+            <div class="box" style="background-color: var(--bg-color); border-color: var(--purple); text-align: center;">
+                <h3 style="color: #8D6E63;">LET'S CONNECT!</h3>
+                <p>Join an invite a connection to wait you wish to forsen and community!</p>
+                <div style="margin-top: 20px;">
+                    <a href="#" class="tag tag-pink">Email</a>
+                    <a href="#" class="tag tag-blue">LinkedIn</a>
+                    <a href="#" class="tag tag-purple">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
